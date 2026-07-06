@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Countdown to College — Know the requirements before it's too late</title>
+  <meta name="description" content="A student-founded, free resource that shows middle and high school families what college admissions actually require — early enough to act on it. Start the countdown in 7th grade, not 12th." />
+
+  <!-- OpenGraph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Countdown to College — Know the requirements before it's too late" />
+  <meta property="og:description" content="Most students find out what their dream school requires when it's too late to build it. We make sure you find out first. Free guide, webinars, and grade-by-grade plans." />
+  <meta property="og:site_name" content="Countdown to College" />
+  <!-- Optional: drop a 1200x630 image at public/og-image.png and uncomment:
+  <meta property="og:image" content="public/og-image.png" /> -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Countdown to College — Know the requirements before it's too late" />
+  <meta name="twitter:description" content="Free guide, webinars, and grade-by-grade college plans for families — starting in 7th grade, not 12th." />
+  <meta name="theme-color" content="#FF6B35" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script defer src="content.js"></script>
+  <script defer src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Countdown to College",
+    "description": "Student-founded organization helping middle and high school families understand college admissions requirements early enough to act on them.",
+    "email": "hello@countdowntocollege.org"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Countdown to College — home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect x="12" y="4" width="40" height="8" rx="4" fill="currentColor"/>
+          <rect x="12" y="52" width="40" height="8" rx="4" fill="currentColor"/>
+          <path d="M18 12h28v5c0 8-6 12-11 15 5 3 11 7 11 15v5H18v-5c0-8 6-12 11-15-5-3-11-7-11-15z" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">Countdown<span class="brand-accent">2</span>College</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#problem">The problem</a></li>
+          <li><a href="#guide">The guide</a></li>
+          <li><a href="#path">Your path</a></li>
+          <li><a href="#families">Families</a></li>
+          <li><a href="#webinars">Webinars</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a class="btn btn-primary btn-sm" href="#guide">Get the guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="badge" data-bind="hero.badge">Student-founded · Free for families</p>
+          <h1 id="hero-heading" data-bind="hero.headline">The countdown to college started in 7th&nbsp;grade.</h1>
+          <p class="lead" data-bind="hero.subhead">Most students find out what their dream school requires when it's too late to build it. We make sure you find out first.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="public/guide.pdf" data-bind-href="links.guidePdf" data-bind="hero.primaryCta">Get the free guide</a>
+            <a class="btn btn-outline" href="#webinars" data-bind="hero.secondaryCta">Join a webinar</a>
+          </div>
+        </div>
+
+        <!-- Signature interactive: pick a grade, watch the clock -->
+        <div class="hero-timer reveal" id="countdown-widget">
+          <div class="timer" role="img" aria-labelledby="timer-sr">
+            <div class="timer-top">
+              <span class="timer-dot" aria-hidden="true"></span>
+              <span class="timer-title" aria-hidden="true">countdown running</span>
+            </div>
+            <div class="timer-big" aria-hidden="true">
+              <span class="timer-big-num" id="timer-big-num">5</span>
+              <span class="timer-big-unit" id="timer-big-unit">years</span>
+            </div>
+            <p class="timer-label" aria-hidden="true" id="timer-label" data-bind="hero.timerLabel">until college applications open</p>
+            <div class="timer-units" id="timer-units" aria-hidden="true">
+              <div class="unit"><span class="unit-num" id="t-days">—</span><span class="unit-label">days</span></div>
+              <div class="unit"><span class="unit-num" id="t-hours">—</span><span class="unit-label">hrs</span></div>
+              <div class="unit"><span class="unit-num" id="t-mins">—</span><span class="unit-label">min</span></div>
+              <div class="unit"><span class="unit-num" id="t-secs">—</span><span class="unit-label">sec</span></div>
+            </div>
+            <p class="sr-only" id="timer-sr" aria-live="polite"></p>
+          </div>
+          <div class="grade-picker">
+            <p class="grade-picker-label" id="grade-picker-label" data-bind="hero.gradePrompt">I'm in…</p>
+            <div class="grade-chips" role="group" aria-labelledby="grade-picker-label" id="grade-chips">
+              <noscript><p class="muted">Enable JavaScript to use the interactive countdown — or just grab the guide above.</p></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="section section-cream" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+        <h2 id="problem-heading" class="section-heading reveal"><span class="mark" data-bind="problem.heading">The application is built years before it's submitted.</span></h2>
+        <p class="section-intro reveal" data-bind="problem.intro">Nobody hides the requirements. But nobody hands them to you in 7th grade, either — and that's when the clock actually starts.</p>
+        <div class="card-grid card-grid-3" id="problem-cards">
+          <article class="card stat-card reveal">
+            <p class="stat" data-bind="problem.cards.0.stat">8th grade</p>
+            <h3 data-bind="problem.cards.0.headline">Course tracks lock in early.</h3>
+            <p data-bind="problem.cards.0.body">The math class you pick at 13 decides whether calculus — and the majors that expect it — is even on the menu at 17.</p>
+          </article>
+          <article class="card stat-card reveal">
+            <p class="stat" data-bind="problem.cards.1.stat">75%</p>
+            <h3 data-bind="problem.cards.1.headline">of the GPA story ends junior year.</h3>
+            <p data-bind="problem.cards.1.body">By the time most families start paying attention, most of the transcript colleges will actually read is already written.</p>
+          </article>
+          <article class="card stat-card reveal">
+            <p class="stat" data-bind="problem.cards.2.stat">One October</p>
+            <h3 data-bind="problem.cards.2.headline">morning decides National Merit.</h3>
+            <p data-bind="problem.cards.2.body">The junior-year PSAT is the National Merit qualifier. Most families hear about it for the first time in 12th grade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE GUIDE ============ -->
+    <section class="section" id="guide" aria-labelledby="guide-heading">
+      <div class="container guide-grid">
+        <div class="guide-cover-wrap reveal" aria-hidden="true">
+          <div class="guide-cover-back"></div>
+          <div class="guide-cover">
+            <svg class="guide-cover-glyph" viewBox="0 0 64 64" focusable="false">
+              <rect x="12" y="4" width="40" height="8" rx="4" fill="currentColor"/>
+              <rect x="12" y="52" width="40" height="8" rx="4" fill="currentColor"/>
+              <path d="M18 12h28v5c0 8-6 12-11 15 5 3 11 7 11 15v5H18v-5c0-8 6-12 11-15-5-3-11-7-11-15z" fill="currentColor"/>
+            </svg>
+            <p class="guide-cover-title" data-bind="guide.coverTitle">The Countdown Guide</p>
+            <p class="guide-cover-sub" data-bind="guide.coverSubtitle">Grades 7–12 · What to do, and when</p>
+            <p class="guide-cover-badge" data-bind="guide.coverBadge">Free · 2026 Edition</p>
+            <div class="guide-cover-lines">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="guide-copy reveal">
+          <h2 id="guide-heading" class="section-heading" data-bind="guide.heading">One guide. The whole runway.</h2>
+          <p class="section-intro" data-bind="guide.intro">Everything we wish someone had put in our hands in middle school, in one free PDF. No email wall, no upsell.</p>
+          <ul class="check-list" data-list="guide.bullets">
+            <li>A grade-by-grade timeline from 7th through 12th — what to do, and when it stops being possible</li>
+            <li>Admit profiles by tier, so you know what "competitive" actually looks like in numbers</li>
+            <li>Pathways by intended major — the courses and projects each direction expects</li>
+            <li>The parent playbook: the five moments only a parent can own</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="public/guide.pdf" data-bind-href="links.guidePdf" data-bind="guide.cta">Download the free guide</a>
+            <span class="fine-print" data-bind="guide.finePrint">Free PDF · No signup required</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PICK YOUR PATH ============ -->
+    <section class="section section-cream" id="path" aria-labelledby="path-heading">
+      <div class="container">
+        <h2 id="path-heading" class="section-heading reveal" data-bind="paths.heading">Pick your grade. See your move.</h2>
+        <p class="section-intro reveal" data-bind="paths.intro">Tap where you are right now. These are the four things that matter most this year — the full plan is in the guide.</p>
+        <div class="path-widget reveal">
+          <div class="path-tabs" role="tablist" aria-label="Choose your grade" id="path-tabs">
+            <noscript><p class="muted">The interactive grade planner needs JavaScript — everything in it is also in the free guide above.</p></noscript>
+          </div>
+          <div id="path-panels"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOR PARENTS / FOR STUDENTS ============ -->
+    <section class="section" id="families" aria-labelledby="families-heading">
+      <div class="container">
+        <h2 id="families-heading" class="section-heading reveal" data-bind="audiences.heading">Two packets. Two jobs.</h2>
+        <div class="card-grid card-grid-2">
+          <article class="card audience-card reveal">
+            <p class="badge" data-bind="audiences.parent.badge">For parents</p>
+            <h3 data-bind="audiences.parent.headline">There are five moments only a parent can own. Know them.</h3>
+            <p data-bind="audiences.parent.body">Course-track meetings, testing signups, financial aid, the money conversation. The parent packet tells you exactly when your move comes — years in advance.</p>
+            <a class="btn btn-outline" href="public/parent-packet.pdf" data-bind-href="links.parentPacket" data-bind="audiences.parent.cta">Download the parent packet</a>
+          </article>
+          <article class="card audience-card reveal">
+            <p class="badge" data-bind="audiences.student.badge">For students</p>
+            <h3 data-bind="audiences.student.headline">Nobody is coming to plan this for you. Here's the cheat sheet.</h3>
+            <p data-bind="audiences.student.body">One page per grade. What to take, what to join, what to skip, and the deadlines nobody announces. Stick it inside your locker door.</p>
+            <a class="btn btn-outline" href="public/student-packet.pdf" data-bind-href="links.studentPacket" data-bind="audiences.student.cta">Download the student packet</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WEBINARS & SCHOOL VISITS ============ -->
+    <section class="section section-cream" id="webinars" aria-labelledby="webinars-heading">
+      <div class="container">
+        <h2 id="webinars-heading" class="section-heading reveal" data-bind="webinars.heading">Learn it live.</h2>
+        <p class="section-intro reveal" data-bind="webinars.intro">Free sessions for families, run by students who just went through it. Bring questions — that's the point.</p>
+
+        <div class="card-grid card-grid-2 reveal" id="webinar-sessions">
+          <noscript><p class="muted">Session details need JavaScript — email us and we'll send the schedule.</p></noscript>
+        </div>
+
+        <div class="signup-grid">
+          <div class="card signup-card reveal" id="signup">
+            <h3 data-bind="webinars.signupHeading">Save a seat</h3>
+            <p data-bind="webinars.signupNote">Pick any session — we'll send the Zoom link and reminders by email.</p>
+            <div id="signup-embed"></div>
+          </div>
+          <div class="card counselor-card reveal">
+            <h3 data-bind="webinars.counselor.heading">Are you a counselor?</h3>
+            <p data-bind="webinars.counselor.body">We'll present at your school, free — an assembly, a parent night, or a single advisory period. Tell us what your students need.</p>
+            <a class="btn btn-outline" id="counselor-email" href="mailto:hello@countdowntocollege.org" data-bind="webinars.counselor.cta">Email us about a visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / OUR STORY ============ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-portrait reveal" id="about-portrait">
+          <div class="portrait-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <rect x="12" y="4" width="40" height="8" rx="4" fill="currentColor"/>
+              <rect x="12" y="52" width="40" height="8" rx="4" fill="currentColor"/>
+              <path d="M18 12h28v5c0 8-6 12-11 15 5 3 11 7 11 15v5H18v-5c0-8 6-12 11-15-5-3-11-7-11-15z" fill="currentColor"/>
+            </svg>
+          </div>
+          <p class="portrait-name" data-bind="about.founderName">Founder Name</p>
+          <p class="portrait-role" data-bind="about.founderRole">Founder, Countdown to College</p>
+        </div>
+        <div class="about-copy reveal">
+          <h2 id="about-heading" class="section-heading"><span class="mark" data-bind="about.heading">Built by the kid who found out too late.</span></h2>
+          <div class="about-story" data-list="about.story">
+            <p>I grew up dreaming about MIT. I had the poster, the hoodie, the campus tour saved on YouTube.</p>
+            <p>What I didn't have was the information. When I finally read what admitted students had actually done — the math track chosen in middle school, the years of building, the October test I'd never heard of — I was already a senior. The countdown had been running since 7th grade. Nobody told me it started.</p>
+            <p>Countdown to College exists so that never happens to another family. Everything we make is free, built by students, and designed to reach you while there's still time on the clock.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-light" href="#top">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect x="12" y="4" width="40" height="8" rx="4" fill="currentColor"/>
+            <rect x="12" y="52" width="40" height="8" rx="4" fill="currentColor"/>
+            <path d="M18 12h28v5c0 8-6 12-11 15 5 3 11 7 11 15v5H18v-5c0-8 6-12 11-15-5-3-11-7-11-15z" fill="currentColor"/>
+          </svg>
+          <span class="brand-name">Countdown<span class="brand-accent">2</span>College</span>
+        </a>
+        <p class="footer-tagline" data-bind="footer.tagline">Know the requirements before it's too late.</p>
+      </div>
+      <nav class="footer-social" aria-label="Social media">
+        <ul id="footer-socials">
+          <li><a href="mailto:hello@countdowntocollege.org" id="footer-email">hello@countdowntocollege.org</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p id="footer-copyright" data-bind="footer.copyright">Countdown to College © 2026</p>
+      <p class="footer-disclaimer" data-bind="footer.disclaimer">General information, not individual advice — always verify with each college and your counselor.</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <style>.reveal{opacity:1 !important;transform:none !important}</style>
+  </noscript>
+</body>
+</html>

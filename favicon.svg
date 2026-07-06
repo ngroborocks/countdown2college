@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Countdown to College — hourglass mark in brand orange -->
+  <rect x="12" y="4" width="40" height="8" rx="4" fill="#FF6B35"/>
+  <rect x="12" y="52" width="40" height="8" rx="4" fill="#FF6B35"/>
+  <path d="M18 12h28v5c0 8-6 12-11 15 5 3 11 7 11 15v5H18v-5c0-8 6-12 11-15-5-3-11-7-11-15z" fill="#FF6B35"/>
+</svg>
